@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TERANGA FOOD | Restaurant à Dakar</title>
+
+    <meta name="description"
+          content="Découvrez les délicieux plats de TERANGA FOOD et commandez facilement sur WhatsApp.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BARRE DE NAVIGATION -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="#accueil" class="logo">
+                TERANGA<span>FOOD</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#menu">Notre menu</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#menu" class="btn btn-nav">
+                Commander
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- SECTION ACCUEIL -->
+    <main>
+
+        <section class="hero" id="accueil">
+
+            <div class="hero-content container">
+
+                <div class="hero-text">
+
+                    <p class="badge">
+                        BIENVENUE CHEZ TERANGA FOOD
+                    </p>
+
+                    <h1>
+                        Le plaisir de bien manger,
+                        <span>à chaque bouchée !</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Découvrez nos délicieux burgers, nos poulets
+                        savoureux et nos spécialités sénégalaises.
+                        Préparés avec soin, pour vous faire plaisir !
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#menu" class="btn">
+                            Découvrir le menu
+                        </a>
+
+                        <a href="#apropos" class="btn btn-outline">
+                            Qui sommes-nous ?
+                        </a>
+
+                    </div>
+
+                    <div class="hero-info">
+                        <div>
+                            <strong>🍔</strong>
+                            <span>Des plats savoureux</span>
+                        </div>
+
+                        <div>
+                            <strong>📱</strong>
+                            <span>Commande facile</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                        alt="Burger gourmand servi dans un restaurant"
+                    >
+                    <div class="image-label">
+                        <span>🔥</span>
+                        <div>
+                            <strong>Le goût qui rassemble</strong>
+                            <p>Bienvenue chez nous !</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION AVANTAGES -->
+        <section class="features container">
+
+            <article class="feature-card">
+                <span>🍗</span>
+                <div>
+                    <h3>Des plats gourmands</h3>
+                    <p>Un menu varié pour tous les goûts.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <span>🥗</span>
+                <div>
+                    <h3>Un menu varié</h3>
+                    <p>Des spécialités et des classiques.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <span>📲</span>
+                <div>
+                    <h3>Commande simple</h3>
+                    <p>Contactez-nous sur WhatsApp.</p>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- SECTION MENU -->
+        <section class="menu-section" id="menu">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="badge">NOTRE SÉLECTION</p>
+
+                    <h2>Découvrez notre <span>menu</span></h2>
+
+                    <p>
+                        Trouvez votre prochain plat préféré
+                        parmi nos spécialités.
+                    </p>
+
+                </div>
+
+
+                <!-- RECHERCHE -->
+                <div class="menu-tools">
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="🔎 Rechercher un plat..."
+                        aria-label="Rechercher un plat"
+                    >
+
+                    <div class="category-buttons">
+
+                        <button class="category-btn active"
+                                data-category="tous">
+                            Tous
+                        </button>
+
+                        <button class="category-btn"
+                                data-category="senegalais">
+                            Plats sénégalais
+                        </button>
+
+                        <button class="category-btn"
+                                data-category="poulet">
+                            Poulet
+                        </button>
+
+                        <button class="category-btn"
+                                data-category="burger">
+                            Burgers
+                        </button>
+
+                        <button class="category-btn"
+                                data-category="boisson">
+                            Boissons
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARTES DES PLATS -->
+                <div class="menu-grid" id="menuGrid">
+
+
+                    <!-- THIEBOUDIENNE -->
+                    <article class="food-card"
+                             data-category="senegalais"
+                             data-name="thieboudienne">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                                alt="Plat de riz accompagné de légumes"
+                                loading="lazy"
+                            >
+
+                            <span class="food-tag">
+                                Spécialité
+                            </span>
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <h3>Thiéboudienne</h3>
+
+                            <p>
+                                Riz parfumé, poisson et légumes.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <strong class="price">
+                                    5 000 FCFA
+                                </strong>
+
+                                <button class="btn order-btn"
+                                        data-plat="Thiéboudienne"
+                                        data-prix="5000">
+                                    Commander
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POULET YASSA -->
+                    <article class="food-card"
+                             data-category="poulet"
+                             data-name="poulet yassa">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=700&q=80"
+                                alt="Poulet accompagné de légumes"
+                                loading="lazy"
+                            >
+
+                            <span class="food-tag">
+                                Populaire
+                            </span>
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <h3>Poulet Yassa</h3>
+
+                            <p>
+                                Poulet, oignons et citron.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <strong class="price">
+                                    4 500 FCFA
+                                </strong>
+
+                                <button class="btn order-btn"
+                                        data-plat="Poulet Yassa"
+                                        data-prix="4500">
+                                    Commander
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BURGER -->
+                    <article class="food-card"
+                             data-category="burger"
+                             data-name="burger classique">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
+                                alt="Burger avec fromage et salade"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <h3>Burger classique</h3>
+
+                            <p>
+                                Pain, viande, fromage et salade.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <strong class="price">
+                                    3 500 FCFA
+                                </strong>
+
+                                <button class="btn order-btn"
+                                        data-plat="Burger classique"
+                                        data-prix="3500">
+                                    Commander
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POULET GRILLÉ -->
+                    <article class="food-card"
+                             data-category="poulet"
+                             data-name="poulet grillé">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=700&q=80"
+                                alt="Poulet grillé"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <h3>Poulet grillé</h3>
+
+                            <p>
+                                Poulet tendre, grillé et savoureux.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <strong class="price">
+                                    5 000 FCFA
+                                </strong>
+
+                                <button class="btn order-btn"
+                                        data-plat="Poulet grillé"
+                                        data-prix="5000">
+                                    Commander
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MAFA -->
+                    <article class="food-card"
+                             data-category="senegalais"
+                             data-name="mafé">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                                alt="Plat cuisiné accompagné de riz"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <h3>Mafé</h3>
+
+                            <p>
+                                Sauce à l'arachide et accompagnement.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <strong class="price">
+                                    4 000 FCFA
+                                </strong>
+
+                                <button class="btn order-btn"
+                                        data-plat="Mafé"
+                                        data-prix="4000">
+                                    Commander
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BOISSON -->
+                    <article class="food-card"
+                             data-category="boisson"
+                             data-name="jus de bissap">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80"
+                                alt="Boisson fraîche"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <h3>Jus de bissap</h3>
+
+                            <p>
+                                Une boisson fraîche et fruitée.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <strong class="price">
+                                    1 000 FCFA
+                                </strong>
+
+                                <button class="btn order-btn"
+                                        data-plat="Jus de bissap"
+                                        data-prix="1000">
+                                    Commander
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+                <p id="noResults" hidden>
+                    Aucun plat ne correspond à votre recherche.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION À PROPOS -->
+        <section class="about-section" id="apropos">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=85"
+                        alt="Repas préparé et servi"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="about-text">
+
+                    <p class="badge">À PROPOS DE NOUS</p>
+
+                    <h2>
+                        Le bon goût,
+                        <span>la bonne humeur !</span>
+                    </h2>
+
+                    <p>
+                        Chez TERANGA FOOD, nous souhaitons vous faire
+                        découvrir des plats savoureux dans une ambiance
+                        chaleureuse.
+                    </p>
+
+                    <p>
+                        Notre menu associe les spécialités sénégalaises
+                        et les incontournables du fast-food.
+                    </p>
+
+                    <a href="#menu" class="btn">
+                        Explorer notre menu
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION CONTACT -->
+        <section class="contact-section" id="contact">
+
+            <div class="container contact-content">
+
+                <p class="badge">UNE ENVIE GOURMANDE ?</p>
+
+                <h2>
+                    Votre prochain repas
+                    <span>vous attend !</span>
+                </h2>
+
+                <p>
+                    Choisissez votre plat et contactez-nous
+                    directement sur WhatsApp.
+                </p>
+
+                <a href="#menu" class="btn">
+                    Voir les plats
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIED DE PAGE -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#accueil" class="logo">
+                TERANGA<span>FOOD</span>
+            </a>
+
+            <p>
+                © <span id="currentYear"></span> TERANGA FOOD.
+                Tous droits réservés.
+            </p>
+
+            <a href="#accueil">
+                Retour en haut ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

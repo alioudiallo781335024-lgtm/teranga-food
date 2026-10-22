@@ -1,0 +1,870 @@
+/* =========================================
+   1. RÉGLAGES GÉNÉRAUX
+========================================= */
+
+:root {
+    --rouge: #e63925;
+    --rouge-fonce: #c92c1b;
+    --jaune: #ffca28;
+    --blanc: #ffffff;
+    --fond: #fffaf4;
+    --texte: #292929;
+    --gris: #777777;
+    --bordure: #eeeeee;
+    --ombre: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--blanc);
+    color: var(--texte);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1150px, 92%);
+    margin: 0 auto;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   2. BARRE DE NAVIGATION
+========================================= */
+
+.header {
+    background: var(--blanc);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: var(--texte);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--rouge);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--rouge);
+}
+
+
+/* =========================================
+   3. BOUTONS
+========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rouge);
+    color: var(--blanc);
+    border: 2px solid var(--rouge);
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.25s, background 0.25s;
+}
+
+.btn:hover {
+    background: var(--rouge-fonce);
+    border-color: var(--rouge-fonce);
+    transform: translateY(-2px);
+}
+
+.btn-nav {
+    padding: 10px 18px;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--texte);
+    border-color: #dddddd;
+}
+
+.btn-outline:hover {
+    color: var(--blanc);
+    border-color: var(--rouge);
+}
+
+
+/* =========================================
+   4. ACCUEIL
+========================================= */
+
+.hero {
+    background: var(--fond);
+    padding: 75px 0 85px;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.badge {
+    display: inline-block;
+    color: var(--rouge);
+    background: #fff0e9;
+    padding: 7px 13px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 4.5vw, 59px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-text h2 span,
+.contact-content h2 span {
+    color: var(--rouge);
+}
+
+.hero-description {
+    max-width: 500px;
+    color: var(--gris);
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.hero-info div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.hero-info strong {
+    font-size: 23px;
+}
+
+.hero-info span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image > img {
+    height: 430px;
+    border-radius: 22px;
+    box-shadow: var(--ombre);
+}
+
+.image-label {
+    position: absolute;
+    bottom: 20px;
+    left: -25px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: var(--blanc);
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: var(--ombre);
+}
+
+.image-label > span {
+    font-size: 30px;
+}
+
+.image-label strong {
+    font-size: 14px;
+}
+
+.image-label p {
+    color: var(--gris);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   5. AVANTAGES
+========================================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px;
+    border: 1px solid var(--bordure);
+    border-radius: 12px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.feature-card:hover {
+    box-shadow: var(--ombre);
+    transform: translateY(-4px);
+}
+
+.feature-card > span {
+    font-size: 30px;
+}
+
+.feature-card h3 {
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.feature-card p {
+    font-size: 12px;
+    color: var(--gris);
+}
+
+
+/* =========================================
+   6. MENU
+========================================= */
+
+.menu-section {
+    background: var(--fond);
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: var(--gris);
+}
+
+
+/* RECHERCHE ET CATÉGORIES */
+
+.menu-tools {
+    margin-bottom: 35px;
+}
+
+#searchInput {
+    display: block;
+    width: min(550px, 100%);
+    margin: 0 auto 22px;
+    padding: 15px 18px;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    outline: none;
+    background: var(--blanc);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+#searchInput:focus {
+    border-color: var(--rouge);
+    box-shadow: 0 0 0 3px rgba(230, 57, 37, 0.1);
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-btn {
+    border: 1px solid #e5e5e5;
+    background: var(--blanc);
+    padding: 10px 17px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.3s, color 0.3s;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--rouge);
+    color: var(--blanc);
+    border-color: var(--rouge);
+}
+
+
+/* CARTES DES PLATS */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.food-card {
+    background: var(--blanc);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--ombre);
+}
+
+.food-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.food-image img {
+    height: 220px;
+    transition: transform 0.4s;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.05);
+}
+
+.food-tag {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: var(--jaune);
+    color: #292929;
+    padding: 6px 11px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.food-content {
+    padding: 20px;
+}
+
+.food-content h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.food-content > p {
+    min-height: 45px;
+    font-size: 13px;
+    color: var(--gris);
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.price {
+    color: var(--rouge);
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.order-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+}
+
+#noResults {
+    text-align: center;
+    color: var(--gris);
+    padding: 30px 0;
+}
+
+
+/* =========================================
+   7. À PROPOS
+========================================= */
+
+.about-section {
+    padding: 90px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-image img {
+    height: 400px;
+    border-radius: 18px;
+}
+
+.about-text h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.about-text > p:not(.badge) {
+    color: var(--gris);
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.about-text .btn {
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   8. CONTACT
+========================================= */
+
+.contact-section {
+    background: #292929;
+    color: var(--blanc);
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.contact-content h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 17px;
+}
+
+.contact-content > p:not(.badge) {
+    color: #dddddd;
+    margin-bottom: 25px;
+}
+
+.contact-content .badge {
+    background: #422b27;
+}
+
+
+/* =========================================
+   9. PIED DE PAGE
+========================================= */
+
+.footer {
+    background: #1e1e1e;
+    color: var(--blanc);
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .logo {
+    color: var(--blanc);
+}
+
+.footer p,
+.footer-content > a:last-child {
+    color: #cccccc;
+    font-size: 12px;
+}
+
+.footer-content > a:last-child:hover {
+    color: var(--jaune);
+}
+
+
+/* =========================================
+   10. TABLETTES
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-image > img {
+        height: 350px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .features {
+        gap: 12px;
+    }
+
+    .feature-card {
+        padding: 15px;
+    }
+
+    .about-content {
+        gap: 35px;
+    }
+}
+
+
+/* =========================================
+   11. TÉLÉPHONES
+========================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .btn-nav {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 50px 0 60px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+        letter-spacing: -1.3px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-image > img {
+        height: 300px;
+    }
+
+    .image-label {
+        left: 10px;
+        bottom: 12px;
+        padding: 12px;
+    }
+
+    .hero-info {
+        gap: 15px;
+    }
+
+    .hero-info span {
+        font-size: 11px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .feature-card {
+        padding: 18px;
+    }
+
+    .menu-section {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .category-buttons {
+        gap: 8px;
+    }
+
+    .category-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .food-image img {
+        height: 240px;
+    }
+
+    .food-content {
+        padding: 18px;
+    }
+
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .contact-section {
+        padding: 60px 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   12. PETITS TÉLÉPHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .hero h1 {
+        font-size: 33px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .food-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .food-bottom .btn {
+        width: 100%;
+    }
+
+}
+/* PANIER */
+
+.cart-section {
+    margin-top: 45px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.cart-section h2 {
+    margin-bottom: 20px;
+}
+
+#cartCount {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    margin-left: 6px;
+    background: #e63925;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cart-item p {
+    color: #e63925;
+    font-size: 13px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-controls button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 7px;
+    background: #fff0e9;
+    color: #e63925;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quantity-controls button:hover {
+    background: #e63925;
+    color: #ffffff;
+}
+
+.cart-total-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 25px 0;
+    font-size: 18px;
+}
+
+#cartTotal {
+    color: #e63925;
+}
+
+#checkoutButton {
+    width: 100%;
+    max-width: 380px;
+}
+
+@media (max-width: 480px) {
+    .cart-section {
+        padding: 18px;
+    }
+
+    .cart-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cart-total-line {
+        font-size: 15px;
+    }
+}
